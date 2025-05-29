@@ -1,5 +1,5 @@
 import time
-from uoevo.lib.gathering import GUMP_ID_INGOT_KEY
+from vasflam.uoevo.lib.gathering import GUMP_ID_INGOT_KEY
 
 TYPE_SHOVEL = 0x0F39
 TYPE_ORES = [0x19B7, 0x19B8, 0x19B9, 0x19BA]

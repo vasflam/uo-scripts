@@ -1,6 +1,6 @@
-from uoevo.lib.crafting.blacksmithing import BS_CONFIG
-from uoevo.lib.crafting.bod import BOD
-from uoevo.lib.crafting.common import CraftingGump
+from vasflam.uoevo.lib.crafting.blacksmithing import BS_CONFIG
+from vasflam.uoevo.lib.crafting.bod import BOD
+from vasflam.uoevo.lib.crafting.common import CraftingGump
 
 BOD_TYPES = {
     # BS

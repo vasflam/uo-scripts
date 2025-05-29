@@ -1,5 +1,5 @@
-from uoevo.lib.crafting.resources import RESOURCE_COLORS
-from uoevo.lib.crafting.common import CraftingSection, CraftingConfig, CraftingItem
+from vasflam.uoevo.lib.crafting.resources import RESOURCE_COLORS
+from vasflam.uoevo.lib.crafting.common import CraftingSection, CraftingConfig, CraftingItem
 
 BS_CRAFTING_SECTIONS = [
     CraftingSection('ringmail', 1, [

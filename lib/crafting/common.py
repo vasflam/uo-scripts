@@ -1,6 +1,6 @@
-from uoevo.lib.crafting import CRAFTING_GUMP_ID
-from uoevo.lib.crafting.bod import BOD
-from uoevo.lib.crafting.resources import RESOURCE_COLORS
+from vasflam.uoevo.lib.crafting import CRAFTING_GUMP_ID
+from vasflam.uoevo.lib.crafting.bod import BOD
+from vasflam.uoevo.lib.crafting.resources import RESOURCE_COLORS
 
 
 class CraftingGump:
