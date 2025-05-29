@@ -1,0 +1,1 @@
+GUMP_ID_INGOT_KEY = 0xc0f93b2d
