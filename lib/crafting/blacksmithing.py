@@ -1,6 +1,10 @@
+from vasflam.lib.logging import debug
+from vasflam.uoevo.lib.crafting import CRAFTING_GUMP_ID
 from vasflam.uoevo.lib.crafting.resources import RESOURCE_COLORS
 from vasflam.uoevo.lib.crafting.common import CraftingSection, CraftingConfig, CraftingItem
 
+BS_BOD_COLOR = 0x13E3
+BS_TOOL_GRAPHIC = 0x13E3
 BS_CRAFTING_SECTIONS = [
     CraftingSection('ringmail', 1, [
         CraftingItem('ringmail gloves', button=2),
@@ -184,4 +188,13 @@ BS_CRAFTING_SECTIONS = [
     ]),
 ]
 
-BS_CONFIG = CraftingConfig(0x13E3, 0x13E3, BS_CRAFTING_SECTIONS, RESOURCE_COLORS)
+def smelt_item(item):
+    if Gumps.HasGump(CRAFTING_GUMP_ID):
+        gd = Gumps.GetGumpData(CRAFTING_GUMP_ID)
+        if 'SMELT ITEM' not in gd.gumpText:
+            debug('No smelt item button in gump')
+            Gumps.SendAction(CRAFTING_GUMP_ID, 14)
+            Target.WaitForTarget(13000)
+            Target.TargetExecute(item)
+            Gumps.WaitForGump(CRAFTING_GUMP_ID, 13000)
+BS_CONFIG = CraftingConfig(BS_BOD_COLOR, BS_TOOL_GRAPHIC, BS_CRAFTING_SECTIONS, RESOURCE_COLORS, recycle_fn=smelt_item)

@@ -79,4 +79,5 @@ def gathering_mine_tile(tile = None, furnace = None, ingot_key = None, timeout=5
             return True
         if int(time.time())*1000 - start > timeout:
             return True
-        Misc.Pause(300)
+        print('wait for message')
+        Misc.Pause(600)
